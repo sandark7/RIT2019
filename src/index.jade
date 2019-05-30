@@ -1,0 +1,260 @@
+include ./blocks/slide.jade
+include ./blocks/cover.jade
+include ./blocks/quote.jade
+include ./blocks/frame.jade
+
+- var title = "Почему не надо становиться руководителем"
+
+doctype html
+html(lang='ru')
+  head
+    title !{title}
+    meta(charset='utf-8')
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='shower/themes/ribbon/styles/screen-16x9.css')
+    link(rel='stylesheet', href='theme.css')
+    link(rel='stylesheet', href='slides.css')
+  body.shower.list
+    header.caption
+      h1 !{title}
+    +slide({name: 'cover', header: title + '🙅🏻‍♂️', classes: 'label-header cover'})
+      p(style="color: black; position: absolute; top: 26%; left: 13%") Андрей Смирнов (
+        a(style="color: black;", href='https://twitter.com/frontendweekend' target="_blank") @frontendweekend
+        | )
+      +cover('pictures/fc-bg.png')
+    +slide({header: "", classes: "label-header black"})
+      +cover('pictures/fwlogo.png')
+      div.next
+        +cover('pictures/personal-logo.png')
+    +slide({header: "Кто я?", classes: "label-header white"})
+      ul
+        li UI Practice Lead, IPONWEB
+        li.next Прошел полный путь от обычного фронтендера
+      p
+        img.logo(src="pictures/fwlogo.png")
+        img.logo(src="pictures/ramblerfront.jpg")
+      +cover('pictures/about.jpg')
+    +slide({header: "", classes: "cover label-header"})
+      +cover('pictures/stories.jpg')
+    +slide({header: "Зачем вам этот доклад?", classes: "label-header"})
+      ul.nosign
+        li 👍 Как стать хорошим руководителем 
+        li.next 🙅🏻‍♂️ или Почему им не становиться
+        li.next 🤷‍♀️ Как и куда расти в этом случае
+      img(src="pictures/thinking.png", class="place bottom right", style="width: 30%; transform: scaleX(-1);")
+    +slide({header: "", classes: ""})
+      img(src="pictures/website-disclaimer.png", width="40%" style="margin-left: 30%")
+      ul.nosign
+        li 🙊 Сугубо субъективное мнение
+        li 🤷🏻‍♂️ Не является истиной в последней инстанции
+    +slide({header: "Разработчик <span style='color:black'>станет</span> тимлидом", shout: 'true', classes: "label-header cover"})
+      +cover('pictures/background.png')
+    +slide({header: "", classes: "label-header white clear"})
+      img(src="pictures/popular-keyskills.png", width="120%", style="margin-top: -3%; margin-left: -10%")
+    +slide({header: "Frontend vs Teamleading", classes: "label-header"})
+      table.compare-table
+        thead
+          tr
+            th
+              img(src="pictures/frontendconf.png", width="250px")
+            th 
+              img(src="pictures/teamleadconf.png", width="250px")
+        tbody
+          tr.next
+            td Москва
+            td Москва
+          tr.next
+            td 2018 год
+            td 2019 год
+          tr.next(style="line-height: 1.4")
+            td.bold 358 человек
+              | 
+              br 
+              | 👤👤👤👤👤👤👤👤👤👤👤👤
+            td.bold 1114 человек
+              | 
+              br 
+              | 👤👤👤👤👤👤👤👤👤👤👤👤👤👤👤👤👤👤👤👤👤👤👤👤👤👤👤👤👤👤👤👤👤👤👤👤
+    +slide({header: "Тимлидов становится больше", classes: "label-header"})
+      ul 
+        li.next Тимлидов принято выращивать внутри компании
+        li.next Возвращаться в разработчики — дауншифтинг
+      div.next
+        video(src="pictures/do-it.mp4", class="cover place left height", autoplay="", loop="", muted="", playsinline)
+        video(src="pictures/do-it.mp4", class="cover place height", autoplay="", loop="", muted="", playsinline)
+        video(src="pictures/do-it.mp4", class="cover place right height", autoplay="", loop="", muted="", playsinline)
+    +slide({header: "Тимлидами становятся<br><span style='color:black'>не те</span> разработчики", classes: "label-header cover"})
+      +cover('pictures/wrong.jpg')
+    +slide({header: "Разработчик <span style='color:black'>должен</span> стать тимлидом", shout: 'true', classes: "label-header cover"})
+      +cover('pictures/background.png')
+    +slide({header: "", classes: "cover label-header"})
+      +cover('pictures/stories.jpg')
+    +slide({header: "Путь большинства", classes: "label-header"})
+      p.center 1 год работал middle-разработчиком
+      p.next.center ⬇️
+        br
+        span #[strong Повысили] полгода назад до ведущего разработчика
+      p.next.center ⬇️
+        br
+        span Всё хорошо, но интересуют #[strong только прямые обязанности]
+      // +cover('pictures/anton-possibility.png')
+    +slide({classes: "clear"})
+      video(src="pictures/homer.mp4", class="cover width", autoplay="", loop="", muted="", playsinline, width="350")
+    +slide({header: "Разработчики хотят расти", classes: "label-header cover white"})
+      ul.nosign
+        li.next 💰 Больше денег
+        li.next ⏫ Выше должность
+      // p.bold.next Разговор о повышении
+      +cover('pictures/grow.png')
+    +slide({header: "А не хочешь попробовать тимлидом", shout: true, classes: "label-header cover"})
+      +cover('pictures/background.png')
+      // +cover('pictures/anton-possibility.png')
+      // стилизовать как прямую речь
+    +slide({header: "", classes: "cover"})
+      +cover('pictures/anton-accept.jpg')
+    +slide({header: "Почему соглашаются", shout: true, classes: "label-header cover"})      
+      +cover('pictures/background.png')
+      // +cover('pictures/anton-why-agree.jpg')
+    +slide({header: "Социально предпочтительная активность", classes: "label-header"})
+      // +cover('pictures/background.png')
+      img(src="pictures/ryan-reynolds.jpg", width="830")
+    +slide({header: "Ситуационная работа<br>человеческого мозга", classes: "label-header clear"})
+      // +cover('pictures/background.png')
+      img(src="pictures/expectations.jpg", class="place right cover height")
+      //video.next(src="pictures/snoop.mp4", class="place right bottom", autoplay="", loop="", muted="", playsinline, width="300")
+    +slide({header: "Что ждёт дальше?", shout: true, classes: "label-header cover "})
+      +cover('pictures/background.png')
+      // +cover('pictures/main.jpg')
+    +slide({header: "Мало программирования", classes: "label-header"})
+      // +cover('pictures/myth1.png')
+      img(src="pictures/calendar.png", width="100%")
+    +slide({header: "Много разговоров", classes: "label-header"})
+      video(src="pictures/talking.mp4", class="place", autoplay="", loop="", muted="", playsinline, width="500")      
+      // +cover('pictures/background.png')
+      // +cover('pictures/myth2.png')
+    +slide({header: "Крутой разработчик<br>!==<br>Хороший руководитель", shout: true, classes: "label-header cover"})
+      +cover('pictures/background.png')
+      // +cover('pictures/myth3.png')
+    +slide({header: "", classes: ""})
+      table.compare-table
+        thead
+          tr
+            th
+              💻 Программист
+            th
+              💼 Руководитель
+        tbody
+          tr.next
+            td Структуры данных
+            td Создание корп. культуры
+          tr.next
+            td Алгоритмы
+            td Самообразование
+          tr.next
+            td Системное программирование
+            td Развитие сети контактов
+          tr.next
+            td Автоматизация билдов
+            td Саморефлексия
+          tr.next
+            td Автоматизация тестирования
+            td Стратегия развития
+          tr.next
+            td Декомпозиция задачи
+            td Ответственность
+          tr.next
+            td Декомпозиция системы
+            td Навыки презентаций
+          tr.next
+            td.green Общение
+            td.green Переговоры
+    +slide({header: "Угадай навык", classes: "label-header"})
+      p.next Может понимать и объяснять в точно выраженной форме.
+        br
+        span.next.bold 💻 Программист, продвинутый уровень
+      p.next Понимает разные типы людей, общение ведет на интуитивном уровне.
+        br
+        span.next.bold 💼 Руководитель, начальный уровень
+      p.next Его понимают. Хорошие правописание и грамматика.
+        br
+        span.next.bold 💻 Программист, начальный уровень
+    +slide({header: "", classes: "cover"})
+      +cover('pictures/fuckoff.jpg')
+    +slide({header: "", classes: "cover label-header"})
+      +cover('pictures/stories.jpg')
+    +slide({header: "Что делать?", shout: true, classes: "label-header cover"})
+      +cover('pictures/background.png')
+    +slide({header: "Забить на общественное осуждение", classes: "label-header"})
+      +cover("pictures/anton-brain.jpg")
+    +slide({header: "Не бояться сменить работу", classes: "label-header"})
+      img.cover.width(src="pictures/pig.jpg")
+    +slide({header: "Придумать особенный карьерный путь", classes: "label-header"})
+      img(src="pictures/makeev.png", class="cover width place top")
+    +slide({header: "", classes: "label-header"})
+      div.cover.width.height(style="background: #c10a06")
+      img.cover(src="pictures/more.jpg")
+    +slide({header: "", classes: "cover label-header"})
+      +cover('pictures/stories.jpg')
+    // +slide({header: "Ситуационная работа<br>человеческого мозга", classes: "label-header"})
+    //   p.next Как решить проблему?
+    //   +cover('pictures/anton-brain.png')
+
+    +slide({header: "А куда расти?", shout: true, classes: "label-header cover"})
+      +cover('pictures/background.png')
+    +slide({header: "Проблема не уникальна", classes: "cover label-header"})
+      +cover('pictures/not-unique.jpg')
+    +slide({header: "TCP", classes: "label-header"})
+      // img(src='pictures/career-path.png', width='650')
+      +cover('pictures/career-path.png')
+    +slide({header: "Разработчик <span style='color:black'>может</span> стать тимлидом", shout: 'true', classes: "label-header cover"})
+      +cover('pictures/background.png')
+    +slide({header: "Не каждый", classes: "label-header cover"})
+      +cover('pictures/klichko.jpg')
+    +slide({header: "Другой путь", classes: "label-header"})
+      ul
+        li Middle-разработчик
+        li.next Берёт на себя ответственность
+        li.next Проактивен
+      img.place.bottom.right.next(src="pictures/active.gif", width="300")
+    +slide({header: "Надо пробовать", shout: true, classes: "label-header cover"})
+      +cover('pictures/background.png')
+      // +cover('pictures/thinking-artem.png')
+    +slide({header: "Проводить собеседования", classes: "cover label-header"})
+      +cover('pictures/interview.png')
+    +slide({header: "Развивать лидерские качества", classes: "cover label-header"})
+      +cover('pictures/leader.png')
+    +slide({header: "Общаться не только<br>с разработкой", classes: "cover label-header"})
+      +cover('pictures/anton-why-agree.jpg')
+    +slide({header: "", classes: "cover label-header"})
+      +cover('pictures/stories.jpg')
+    +slide({header: "МНОГО ревьюить чужой код", classes: "cover label-header"})
+      +cover('pictures/review.png')
+    +slide({header: "Смотреть можно, трогать нельзя", classes: "cover label-header"})
+      img.cover.width(src='pictures/cusak.gif')
+    +slide({header: "Сам бы сел и запрогал быстрее,<br>только болтовнёй занимаюсь", classes: "cover label-header"})
+      img.cover.width(src='pictures/cusak.gif')
+    +slide({header: "Заключение", shout: true, classes: "label-header cover"})
+      +cover('pictures/background.png')
+    +slide({header: "", classes: "cover label-header"})
+      +cover('pictures/dud.jpg')
+    +slide({header: "Сравнение зарплат<br>фронтендеров и тимлидов", classes: "label-header"})
+      img(src="pictures/salary-difference.png", width="100%")
+    +slide({header: "За что вы сражаетесь?", classes: "label-header black"})
+      img(src="pictures/fighting-for.jpg", width="100%")
+    +slide({header: "", classes: "cover label-header"})
+      h2.next Не тимлид
+      +cover('pictures/thai.jpg')
+    +slide({header: "", classes: "cover label-header"})
+      h2.next Не тимлид
+      +cover('pictures/flexible.png')
+    +slide({header: "Тимлид", classes: "label-header"})
+      img(src="pictures/calendar.png", width="100%")
+    +slide({name: 'end', header: "Вопросы?", classes: 'cover label-header white'})
+      p.end-link Андрей Смирнов (
+        a(href='https://twitter.com/frontendweekend' target="_blank") @frontendweekend
+        | )
+      +cover('pictures/lovedeath-bg.png')
+
+    .progress
+    script(src='shower/shower.min.js')

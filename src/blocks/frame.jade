@@ -1,0 +1,11 @@
+mixin frame(src)
+    .frame
+        .title 
+            .btn.close
+            .btn.hide
+            .btn.expand
+        if src
+            iframe(src=src, width="100%", height="350")
+        if block
+            .frame-body
+                block
