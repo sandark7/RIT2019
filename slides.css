@@ -79,15 +79,7 @@ iframe {
 }
 .compare-table th,
 .compare-table td {
-  width: 15%;
-}
-.compare-table th:first-child,
-.compare-table td:first-child {
-  width: 24%;
-}
-.compare-table th:last-child,
-.compare-table td:last-child {
-  width: 17%;
+  width: 50%;
 }
 .compare-table th {
   padding-bottom: 20px;
